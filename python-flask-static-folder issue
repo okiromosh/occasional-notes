@@ -1,0 +1,21 @@
+During my python flask learning journey.
+When I encountered the GET/static/img.png HTTP/1.1 404 error.
+After some research
+
+1. Create a static folder in the root project directory
+  RootFolder
+    |__    instance
+    |__   static
+    |__    templates
+    
+    
+2. In your __init__.py file
+
+
+        app.static_folder = '../static'  # I made sure to add the "../"
+
+3. To call the that img in any html page
+        Use the url_for()  command
+        
+    <img class="mb-4" src="{{ url_for('static', filename='img.png') }}" alt="Register Image">
+    
